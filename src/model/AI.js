@@ -138,7 +138,7 @@ class AI {
         let response = null;
         try {
             response = await AI._OpenAIClient.createChatCompletion({
-                model: "gpt-3.5-turbo",
+                model: "gpt-4",
                 messages: [...prompt_and_examples, ...sent_messages],
             });
 
