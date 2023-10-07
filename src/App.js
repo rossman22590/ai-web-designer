@@ -22,7 +22,8 @@ function App() {
 
 	const [usedTokens, setUsedTokens] = useState("0");
 	const [moneySpent, setMoneySpent] = useState("0.00");
-
+    // Get the API key from localStorage or from the environment variable
+    const defaultAPIKey = localStorage.getItem("api_key") || process.env.REACT_APP_OPENAI_API_KEY;
 	// Show a Dialog if the API key is not set in the localStorage yet or if it is not valid
 	const [isCheckingAPIKey, setIsCheckingAPIKey] = useState(false);
 	const [showAPIKeyDialog, setShowAPIKeyDialog] = useState(!AI.isInitialized && !localStorage.getItem("api_key"));
